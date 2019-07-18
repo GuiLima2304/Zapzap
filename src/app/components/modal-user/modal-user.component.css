@@ -1,0 +1,21 @@
+.content{
+    position: fixed;
+    left: calc(50% - 200px);
+    width: 400px;
+    background: white;
+    box-shadow: 5px, rgba(0, 0, 10px, #333);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid black;
+   
+}
+
+.buttons{
+    left: 50%;
+    padding: 10px;;
+}
+
+.saveUser{
+    background-color: darkcyan;
+    color: white;
+}

@@ -1,0 +1,6 @@
+<div *ngIf="!editField" class="message" [class.me]="message.me" (dblclick)="teste(message.texto)">{{message.texto}}</div>
+
+<div *ngIf="editField" class="message" [class.me]="message.me">
+    <input type="text" (keyup.enter)="editar(index)" [(ngModel)]="newText"/>
+    <button type="button"  (click)="editar(index)">Enviar</button>
+</div>

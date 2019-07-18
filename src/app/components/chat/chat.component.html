@@ -1,0 +1,14 @@
+<div class="chat-box">
+    <div class="header">
+        <div class="user-photo" [ngStyle]="{'background-image': 'url('+ (user$ | async)?.foto + ')'}"></div>
+        <div class="user-name">{{ (user$ | async)?.nome }}</div>
+    </div>
+
+    <div class="body">
+        <app-list-messages [listMessages]="(user$ | async)?.mensagens"></app-list-messages>
+        <div class="send-message">
+                <input (keyup.enter)="sendMessage()" type="text" placeholder="Digite sua mensagem" [(ngModel)]="message"/>
+                <button type="submit"  (click)="sendMessage()"><a>Enviar</a></button>
+        </div>
+    </div>
+</div>

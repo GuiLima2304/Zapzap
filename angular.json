@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ZapZap"
+    }
+  },
+  "defaultProject": "ZapZap",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

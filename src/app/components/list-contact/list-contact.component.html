@@ -1,0 +1,8 @@
+<div class="list-users">
+    <div class="user" (click)="selectUser(i)" *ngFor=" let user of ( userList$ | async); index as i">
+        <div class="user-photo" [ngStyle]="{'background-image': 'url('+ user.foto + ')'}"></div>
+        <div class="user-name">{{user.nome}}</div>
+    </div>
+    <div class="btn-add-user" (click)="openModal()">+</div>
+    <app-modal-user *ngIf="changeStatus$ | async"></app-modal-user>
+</div>
