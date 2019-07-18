@@ -23,7 +23,6 @@ export class ListContactComponent implements OnInit {
 
   openModal(): void{
     this.storeGlobal.dispatch(new ChangeStatusGlobals());
-    console.log(this.changeStatus$);
   }
 
 

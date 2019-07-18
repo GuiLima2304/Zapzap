@@ -7,7 +7,8 @@ export enum ChatTypes {
     FetchMessage = '[Message Component] Fetch Message',
     SaveIndex = '[Message Component] Save Index',
     SendMessage = '[Message Component] Send Message',
-    EditMessage = '[Message Component] Edit Message'
+    EditMessage = '[Message Component] Edit Message',
+    CreateUser = '[Message Component] Create User'
 }
 
 export class NewMessage implements Action {
@@ -44,7 +45,13 @@ export class SendMessage implements Action{
 export class EditMessage implements Action{
     readonly type = ChatTypes.EditMessage;
 
-    constructor(public payload: {text: string, index: number }) {}
+    constructor(public payload: { text: string, index: number }) {}
 }
 
-export type ChatActions = NewMessage | LoadMessage | FetchMessage | SaveIndex | SendMessage | EditMessage;
+export class CreateUser implements Action {
+    readonly type = ChatTypes.CreateUser;
+  
+    constructor(public payload: { nome:string, foto: string}) {}
+  }
+
+export type ChatActions = NewMessage | LoadMessage | FetchMessage | SaveIndex | SendMessage | EditMessage | CreateUser;

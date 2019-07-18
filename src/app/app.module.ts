@@ -18,6 +18,7 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { ModalUserComponent } from './components/modal-user/modal-user.component';
 import { Globalreducer } from './reducers/global.reducer';
+import { UserReducer } from './reducers/user.reducer';
 
 @NgModule({
   declarations: [

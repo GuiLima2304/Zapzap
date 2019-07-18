@@ -13,7 +13,6 @@ export const initialState: GlobalState = {
 export function Globalreducer(state = initialState, action: GlobalActions): GlobalState {
   switch (action.type) {
       case GlobalActionTypes.ChangeStatusGlobals:
-          console.log(state);
       return {...state, changeStatus: !state.changeStatus };
     default:
       return state;

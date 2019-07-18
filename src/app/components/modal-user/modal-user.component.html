@@ -1,12 +1,12 @@
 <div class="content">
     <h2>Add Contact</h2>
     <label>Nome: </label>
-    <input type="text" class="name" placeholder="Digite aqui o apelido"/><br><br>
+    <input type="text" class="name" placeholder="Digite aqui o apelido" [(ngModel)]="nome"/><br><br>
     <label>URL Foto: </label>
-    <input type="text" placeholder="Cole aqui a URL da foto" class="photo"/><br><br>
+    <input type="text" placeholder="Cole aqui a URL da foto" class="photo" [(ngModel)]="foto"/><br><br>
 
     <div class="buttons">
-        <button type="button" class="saveUser">Salvar</button>
+        <button type="button" class="saveUser" (click)="Save(nome,foto)">Salvar</button>
         <button type="button" (click)="closed()">Cancelar</button>
     </div>
 </div>
